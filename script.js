@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function calculateCGPA(numSemesters) {
-        // Clear previous results
+        
         document.getElementById('result').innerHTML = '';
     
         let totalPointsOverall = 0;
@@ -215,14 +215,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (grade === 'U') {
                     arrears.push(input.parentElement.querySelector('label').textContent);
                 } else if (gradePoints[grade] !== undefined) {
-                    // Only consider subjects with grades other than 'U'
+                    
                     totalPointsOverall += gradePoints[grade] * credits;
                     totalCreditsOverall += credits;
                 }
             });
         }
     
-        // Display arrears if any
+        
         if (arrears.length > 0) {
             document.getElementById('result').innerHTML = `
                 <h3>Arrears:</h3>
@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
         }
     
-        // Calculate and display CGPA only if there are credits to calculate
+        
         if (totalCreditsOverall > 0) {
             const overallCGPA = totalPointsOverall / totalCreditsOverall;
             document.getElementById('result').innerHTML += `
