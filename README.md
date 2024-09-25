@@ -1,2 +1,2 @@
 # broken-coders-cgpa-calculation
-preview ->
+preview -> https://udaya-krishna.github.io/broken-coders-cgpa-calculation/
